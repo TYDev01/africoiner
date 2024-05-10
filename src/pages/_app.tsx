@@ -61,7 +61,7 @@ export default function App({ Component, pageProps }: AppProps) {
 		setReady(true);
 	}, []);
 	return (
-		<>
+		<main className='w-full h-full font-tilt'>
 		<div className='bubbles'>
 				<span style={{ '--i': 11 }}></span>
 				<span style={{ '--i': 12 }}></span>
@@ -117,6 +117,6 @@ export default function App({ Component, pageProps }: AppProps) {
 			<StayUpdated />
 			<FAQS />
 			<Footer />
-		</>
+		</main>
 	);
 }

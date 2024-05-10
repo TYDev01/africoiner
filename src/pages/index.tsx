@@ -69,7 +69,7 @@ export default function Home() {
 					</div>
 				</div>
 			</header>
-			<main className={styles.main}>
+			{/* <main className={styles.main}>
 				<div className={styles.wrapper}>
 					<div className={styles.container}>
 						<h1>Next.js Starter Template</h1>
@@ -139,7 +139,7 @@ export default function Home() {
 						</a>
 					</div>
 				</div>
-			</main>
+			</main> */}
 		</>
 	);
 }

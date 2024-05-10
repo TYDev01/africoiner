@@ -1,9 +1,35 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [],
+  content: [
+    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+  ],
   theme: {
+    colors: {
+      "main-black": "#28272a",
+      // primary: 'rgba(255, 255, 255, 0.1)',
+      primary: "#263238",
+      secondary: "rgba(255, 255, 255, 0.35)",
+      tetiary: "rgb(27, 27, 28)",
+      neon: "#0cffa7",
+      neon2: "#099562",
+      white: "#fff",
+      black: "#000",
+      black2: "#141414",
+      transparent: "transparent",
+      // #26262a
+    },
+    fontFamily: {
+      tilt: "Tilt Neon",
+      silkScreen: "Silkscreen",
+    },
+    screens: {
+      sm: "576px",
+
+      md: "960px",
+    },
     extend: {},
   },
   plugins: [],
-}
-
+};
