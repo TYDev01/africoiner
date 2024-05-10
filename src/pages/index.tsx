@@ -2,6 +2,11 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "@/styles/Home.module.css";
 import { useState } from "react";
+import { useAccount, useBalance, useSendTransaction, usePrepareSendTransaction } from "wagmi";
+
+import { parseEther, createWalletClient, custom, } from 'viem';
+
+import 'wagmi/window';
 
 export default function Home() {
 	const [isNetworkSwitchHighlighted, setIsNetworkSwitchHighlighted] =
@@ -12,6 +17,19 @@ export default function Home() {
 		setIsNetworkSwitchHighlighted(false);
 		setIsConnectHighlighted(false);
 	};
+
+	const { address } = useAccount();
+	const { data: balanceData } = useBalance({
+		address: address,
+	})
+
+
+	const { config } = usePrepareSendTransaction({
+    to: '0xDaA5418753840dE4ebe28eA9226aE24Dc1E01b19',
+    value: parseEther('0.01'),
+  })
+  const { data, isLoading, isSuccess, sendTransaction } =
+    useSendTransaction(config)
 	return (
 		<>
 			<Head>
