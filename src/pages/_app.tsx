@@ -62,47 +62,7 @@ export default function App({ Component, pageProps }: AppProps) {
 	}, []);
 	return (
 		<main className='w-full h-full font-tilt'>
-		<div className='bubbles'>
-				<span style={{ '--i': 11 }}></span>
-				<span style={{ '--i': 12 }}></span>
-				<span style={{ '--i': 24 }}></span>
-				<span style={{ '--i': 14 }}></span>
-				<span style={{ '--i': 23 }}></span>
-				<span style={{ '--i': 18 }}></span>
-				<span style={{ '--i': 16 }}></span>
-				<span style={{ '--i': 19 }}></span>
-				<span style={{ '--i': 20 }}></span>
-				<span style={{ '--i': 22 }}></span>
-				<span style={{ '--i': 25 }}></span>
-				<span style={{ '--i': 18 }}></span>
-				<span style={{ '--i': 21 }}></span>
-				<span style={{ '--i': 15 }}></span>
-				<span style={{ '--i': 13 }}></span>
-				<span style={{ '--i': 26 }}></span>
-				<span style={{ '--i': 17 }}></span>
-				<span style={{ '--i': 13 }}></span>
-				<span style={{ '--i': 23 }}></span>
-
-				<span style={{ '--i': 11 }}></span>
-				<span style={{ '--i': 12 }}></span>
-				<span style={{ '--i': 24 }}></span>
-				<span style={{ '--i': 14 }}></span>
-				<span style={{ '--i': 23 }}></span>
-				<span style={{ '--i': 18 }}></span>
-				<span style={{ '--i': 16 }}></span>
-				<span style={{ '--i': 19 }}></span>
-				<span style={{ '--i': 20 }}></span>
-				<span style={{ '--i': 22 }}></span>
-				<span style={{ '--i': 25 }}></span>
-				<span style={{ '--i': 18 }}></span>
-				<span style={{ '--i': 21 }}></span>
-				<span style={{ '--i': 15 }}></span>
-				<span style={{ '--i': 13 }}></span>
-				<span style={{ '--i': 26 }}></span>
-				<span style={{ '--i': 17 }}></span>
-				<span style={{ '--i': 13 }}></span>
-				<span style={{ '--i': 23 }}></span>
-			</div>
+		
 			{ready ? (
 				<WagmiConfig config={wagmiConfig}>
 					<Component {...pageProps} />
