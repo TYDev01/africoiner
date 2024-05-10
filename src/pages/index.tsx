@@ -26,7 +26,7 @@ export default function Home() {
 				/>
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
-			<header>
+			{/* <header>
 				<div
 					className={styles.backdrop}
 					style={{
@@ -68,7 +68,7 @@ export default function Home() {
 						</div>
 					</div>
 				</div>
-			</header>
+			</header> */}
 			{/* <main className={styles.main}>
 				<div className={styles.wrapper}>
 					<div className={styles.container}>

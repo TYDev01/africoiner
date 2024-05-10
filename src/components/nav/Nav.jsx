@@ -3,8 +3,18 @@
 import { MdMenu, MdOutlineClose } from 'react-icons/md';
 import { useState } from 'react';
 import Button from '../button/Button';
+import styles from "@/styles/Home.module.css";
 
 export default function Nav() {
+	const [isNetworkSwitchHighlighted, setIsNetworkSwitchHighlighted] =
+		useState(false);
+	const [isConnectHighlighted, setIsConnectHighlighted] = useState(false);
+
+	const closeAll = () => {
+		setIsNetworkSwitchHighlighted(false);
+		setIsConnectHighlighted(false);
+	};
+	
 	const [showMenu, setShowMenu] = useState(false);
 	const [isExpanded, setIsExpanded] = useState(false);
 
@@ -14,6 +24,16 @@ export default function Nav() {
 	}
 	return (
 		<nav className='w-full m-auto bg-black2'>
+			<div
+					className={styles.backdrop}
+					style={{
+						opacity:
+							isConnectHighlighted || isNetworkSwitchHighlighted
+								? 1
+								: 0,
+					}}
+				/>
+
 			<div className='w-[90%] m-auto py-10 h-[3rem]  flex items-center justify-between'>
 				<h1 className='text-neon font-extrabold text-2xl '>
 					Afri<span className='text-white'>coiner</span>
@@ -27,7 +47,18 @@ export default function Nav() {
 				</ul>
 
 				<div className=''>
-					<Button>connect wallet</Button>
+					{/* <Button>connect wallet</Button> */}
+					<div
+							onClick={closeAll}
+							className={`${styles.highlight} ${
+								isConnectHighlighted
+									? styles.highlightSelected
+									: ``
+							}`}
+						>
+							<w3m-button />
+						</div>
+					{/* connect wallet button here */}
 				</div>
 
 				<button
